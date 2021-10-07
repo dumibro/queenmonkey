@@ -1,17 +1,17 @@
-/* Copyright (C) 2020 Yusuf Usta.
+/* Copyright (C) 2021 king dumiyah
 
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 
-WhatsAsena - Yusuf Usta
+queenmonkey 1.0 beta version
 */
 
-// Komutları burada tutacağız.
+//We'll keep the commands here..
 var config = require('./config');
 var Commands = [];
 
 function addCommand(info, func) {
-    // Basit bir fonksiyon, komut eklemek için.
+    //  A simple function to add commands.
     var types = ['photo', 'image', 'text', 'message'];
 
     var infos = {
@@ -23,6 +23,7 @@ function addCommand(info, func) {
         desc: info['desc'] === undefined ? '' : info['desc'],
         usage: info['usage'] === undefined ? '' : info['usage'],
         dontAddCommandList: info['dontAddCommandList'] === undefined ? false : info['dontAddCommandList'],
+        warn: info['warn'] === undefined ? '' : info['warn'],
         function: func
     };
 
