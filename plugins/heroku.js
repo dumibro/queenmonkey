@@ -688,7 +688,7 @@ queenmonkey.addCommand({pattern: 'delvar ?(.*)', fromMe: true, desc: Lang.DELVAR
 
 }));
 
-Mizuki.addCommand({pattern: 'getvar ?(.*)', fromMe: true, desc: Lang.GETVAR_DESC}, (async (message, match) => {
+queenmonkey.addCommand({pattern: 'getvar ?(.*)', fromMe: true, desc: Lang.GETVAR_DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.KEY_VAL_MISSING, MessageType.text);
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
