@@ -1,6 +1,6 @@
 FROM fusuf/whatsasena:latest
 
-RUN git clone https://github.com/dumibro/queenmonkey /root/WhatsAsenaDuplicated
+RUN git clone https://github.com/dumibro/queenmonkey /WhatsAsenaDuplicated
 WORKDIR /root/WhatsAsenaDuplicated/
 ENV TZ=Europe/Istanbul
 RUN yarn add supervisor -g
